@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CreditsFragment">
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:id="@+id/header"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:layout_height="55dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/tvCountry"
+            android:text="About"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="35dp"
+            android:textSize="21sp"
+            android:textColor="@color/colorWhite"/>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/header"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:id="@+id/headingView"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="90dp"
+                android:id="@+id/profilePic"
+                android:src="@drawable/pngpicf"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="9dp"
+                android:layout_gravity="center"
+                android:layout_height="90dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:layout_toRightOf="@id/profilePic"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:text="@string/about" />
+
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:id="@+id/noteview"
+            android:layout_below="@id/headingView"
+            android:gravity="left"
+            android:textStyle="bold"
+             />
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_weight="1"
+            android:id="@+id/sourceView"
+            android:textSize="15sp"
+            android:layout_below="@id/noteview"
+            android:gravity="left"
+            android:textStyle="bold"
+             />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

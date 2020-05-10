@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.YourCountryFragment">
+
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:orientation="horizontal"
+           android:id="@+id/main_header"
+           android:gravity="bottom"
+           android:background="@color/colorPrimary"
+           android:layout_height="65dp">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textStyle="bold"
+               android:id="@+id/tvCountry"
+               android:layout_marginLeft="35dp"
+               android:textSize="21sp"
+               android:layout_marginBottom="5dp"
+               android:textColor="@color/colorWhite"/>
+
+
+       </LinearLayout>
+       <LinearLayout
+           android:background="@drawable/redbac"
+           android:layout_width="match_parent"
+           android:id="@+id/header"
+           android:layout_below="@id/main_header"
+           android:orientation="vertical"
+           android:layout_height="150dp">
+
+       </LinearLayout>
+       <pl.droidsonroids.gif.GifImageView
+           android:layout_width="100dp"
+           android:layout_height="100dp"
+           android:id="@+id/loadingView"
+           android:visibility="gone"
+           android:layout_below="@id/header"
+
+           android:layout_marginTop="220dp"
+           android:layout_marginLeft="10dp"
+           android:layout_gravity="center"
+           android:layout_centerVertical="true"
+           android:layout_centerInParent="true"
+           android:layout_marginRight="10dp"
+           android:scaleType="centerCrop"
+           android:src="@drawable/giphy"
+           />
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:id="@+id/myCountryHolder"
+           android:layout_below="@id/loadingView"
+           android:layout_height="match_parent">
+       <androidx.cardview.widget.CardView
+           android:layout_width="match_parent"
+           app:cardUseCompatPadding="true"
+           app:cardPreventCornerOverlap="true"
+           app:cardCornerRadius="16dp"
+           android:id="@+id/perfomCard"
+           android:layout_marginRight="35dp"
+           android:layout_marginLeft="35dp"
+           app:cardElevation="4dp"
+           android:layout_height="wrap_content">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="vertical"
+               android:layout_height="wrap_content">
+
+               <ImageView
+                   android:layout_width="match_parent"
+                   android:scaleType="centerCrop"
+                   android:id="@+id/ivFlag"
+                   android:layout_height="200dp"/>
+           </LinearLayout>
+
+       </androidx.cardview.widget.CardView>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:orientation="horizontal"
+           android:id="@+id/dhtholder"
+           android:layout_below="@+id/perfomCard"
+           android:layout_height="wrap_content">
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_weight="1"
+               android:padding="10dp"
+               android:id="@+id/tempHolder"
+               app:cardCornerRadius="16dp"
+               app:cardUseCompatPadding="true"
+               app:cardPreventCornerOverlap="true"
+               android:layout_height="wrap_content">
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:orientation="vertical"
+                   android:layout_height="match_parent">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:text="Cases"
+                       android:gravity="center"
+                       android:textSize="14sp"
+                       android:layout_margin="5dp"
+                       android:textStyle="bold"
+                       android:textColor="@color/colorBlack"
+                       android:layout_gravity="center"
+                       android:layout_height="wrap_content"/>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:gravity="center"
+                       android:textSize="30sp"
+                       android:id="@+id/tvTemp"
+                       android:layout_margin="5dp"
+                       android:textStyle="bold"
+                       android:textColor="@color/colorPrimary"
+                       android:layout_gravity="center"
+                       android:layout_height="wrap_content"/>
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:orientation="horizontal"
+                       android:padding="10dp"
+
+                       android:layout_height="wrap_content">
+                       <mehdi.sakout.fancybuttons.FancyButton
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:gravity="center"
+                           android:layout_weight="1"
+                           android:layout_gravity="center"
+                           android:layout_marginBottom="10dp"
+
+                           fancy:fb_borderColor="#FFFFFF"
+                           fancy:fb_borderWidth="1dp"
+                           android:padding="8dp"
+                           fancy:fb_defaultColor="#CF2540"
+                           fancy:fb_focusColor="#CF2540"
+                           android:layout_marginTop="10dp"
+
+                           fancy:fb_iconPosition="left"
+                           fancy:fb_radius="15dp"
+                           fancy:fb_text="Today"
+                           fancy:fb_textColor="#FFFFFF" />
+
+                       <mehdi.sakout.fancybuttons.FancyButton
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:gravity="center"
+                           android:layout_weight="1"
+                           android:id="@+id/todatCases"
+                           android:layout_gravity="center"
+
+                           android:layout_marginTop="10dp"
+                           android:layout_marginBottom="10dp"
+                           fancy:fb_borderColor="#FFFFFF"
+                           fancy:fb_borderWidth="1dp"
+                           android:padding="8dp"
+                           fancy:fb_defaultColor="#CF2540"
+                           fancy:fb_focusColor="#CF2540"
+                           fancy:fb_iconPosition="left"
+                           fancy:fb_radius="15dp"
+                           fancy:fb_textColor="#ffffff" />
+                   </LinearLayout>
+
+
+
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+           <androidx.cardview.widget.CardView
+               android:layout_width="match_parent"
+               android:layout_weight="1"
+               app:cardCornerRadius="16dp"
+               android:id="@+id/humHolder"
+               android:padding="10dp"
+               app:cardUseCompatPadding="true"
+               app:cardPreventCornerOverlap="true"
+               android:layout_height="wrap_content">
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:orientation="vertical"
+                   android:layout_height="match_parent">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:text="Deaths"
+                       android:gravity="center"
+                       android:textSize="14sp"
+                       android:layout_margin="5dp"
+                       android:textStyle="bold"
+                       android:textColor="@color/colorBlack"
+                       android:layout_gravity="center"
+                       android:layout_height="wrap_content"/>
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:id="@+id/tvHum"
+                       android:gravity="center"
+                       android:textSize="30sp"
+                       android:layout_margin="5dp"
+                       android:textStyle="bold"
+                       android:textColor="@color/colorPrimary"
+                       android:layout_gravity="center"
+                       android:layout_height="wrap_content"/>
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:orientation="horizontal"
+                       android:padding="10dp"
+                       android:layout_height="wrap_content">
+                       <mehdi.sakout.fancybuttons.FancyButton
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:gravity="center"
+                           android:layout_weight="1"
+                           android:layout_gravity="center"
+                           android:layout_marginBottom="10dp"
+
+                           fancy:fb_borderColor="#FFFFFF"
+                           fancy:fb_borderWidth="1dp"
+                           android:padding="8dp"
+                           fancy:fb_defaultColor="#CF2540"
+                           fancy:fb_focusColor="#CF2540"
+                           android:layout_marginTop="10dp"
+
+                           fancy:fb_iconPosition="left"
+                           fancy:fb_radius="15dp"
+                           fancy:fb_text="Today"
+                           fancy:fb_textColor="#FFFFFF" />
+
+                       <mehdi.sakout.fancybuttons.FancyButton
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:gravity="center"
+                           android:layout_weight="1"
+                           android:id="@+id/todatDeaths"
+                           android:layout_gravity="center"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginBottom="10dp"
+
+                           fancy:fb_borderColor="#FFFFFF"
+                           fancy:fb_borderWidth="1dp"
+                           android:padding="8dp"
+                           fancy:fb_defaultColor="#CF2540"
+                           fancy:fb_focusColor="#CF2540"
+                           fancy:fb_iconPosition="left"
+                           fancy:fb_radius="15dp"
+                           fancy:fb_textColor="#ffffff" />
+                   </LinearLayout>
+
+               </LinearLayout>
+
+           </androidx.cardview.widget.CardView>
+
+
+       </LinearLayout>
+       <androidx.cardview.widget.CardView
+           android:layout_width="match_parent"
+           app:cardCornerRadius="16dp"
+           android:padding="10dp"
+           android:id="@+id/moisturecontent"
+           android:layout_below="@+id/dhtholder"
+           app:cardUseCompatPadding="true"
+           app:cardPreventCornerOverlap="true"
+           android:layout_height="200dp">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="vertical"
+               android:layout_gravity="center"
+               android:paddingBottom="10dp"
+               android:gravity="center"
+               android:layout_height="match_parent">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:gravity="center"
+                   android:textSize="18sp"
+                   android:text="Recovery Index"
+                   android:layout_margin="5dp"
+                   android:textStyle="bold"
+                   android:textColor="@color/colorBlack"
+                   android:layout_gravity="center"
+                   android:layout_height="wrap_content"/>
+               <me.itangqi.waveloadingview.WaveLoadingView
+                   android:id="@+id/waveLoadingView"
+                   android:layout_width="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:layout_marginRight="10dp"
+                   android:layout_height="wrap_content"
+                   app:wlv_borderColor="#F56F83"
+                   app:wlv_borderWidth="3dp"
+                   app:wlv_progressValue="50"
+                   app:wlv_shapeType="circle"
+                   app:wlv_round_rectangle="true"
+                   app:wlv_triangle_direction="north"
+                   app:wlv_titleCenterStrokeWidth="3dp"
+                   app:wlv_titleCenterColor="@android:color/white"
+                   app:wlv_titleCenterSize="24sp"
+                   app:wlv_waveAmplitude="70"
+                   app:wlv_waveColor="#F56F83"/>
+
+
+
+           </LinearLayout>
+
+       </androidx.cardview.widget.CardView>
+       <androidx.cardview.widget.CardView
+           android:layout_width="match_parent"
+           app:cardCornerRadius="16dp"
+           android:padding="10dp"
+           android:id="@+id/activityHolder"
+           android:layout_marginBottom="100dp"
+           android:layout_below="@+id/moisturecontent"
+           app:cardUseCompatPadding="true"
+           app:cardPreventCornerOverlap="true"
+           android:layout_height="wrap_content">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="vertical"
+               android:layout_gravity="center"
+               android:gravity="center"
+               android:layout_height="match_parent">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:text="More "
+                   android:gravity="center"
+                   android:textSize="20sp"
+                   android:layout_margin="5dp"
+                   android:textStyle="bold"
+                   android:textColor="@color/colorBlack"
+                   android:layout_gravity="center"
+                   android:layout_height="wrap_content"/>
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="25dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginRight="25dp"
+                   android:layout_marginBottom="10dp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-light"
+                       android:text="Recovered"
+                       android:textSize="18sp" />
+
+                   <TextView
+                       android:id="@+id/tvRecovered"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:fontFamily="sans-serif-light"
+                       android:text="0"
+
+                       android:textAlignment="textEnd"
+                       android:textColor="@color/colorOne"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </RelativeLayout>
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginRight="20dp"
+                   android:background="@color/colorTwo" />
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="25dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginRight="25dp"
+                   android:layout_marginBottom="10dp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-light"
+                       android:text="Critical"
+                       android:textSize="18sp" />
+
+                   <TextView
+                       android:id="@+id/tvCritical"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:fontFamily="sans-serif-light"
+                       android:text="0"
+                       android:textAlignment="textEnd"
+                       android:textColor="@color/colorOne"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </RelativeLayout>
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginRight="20dp"
+                   android:background="@color/colorTwo" />
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="25dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginRight="25dp"
+                   android:layout_marginBottom="10dp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-light"
+                       android:text="Active"
+                       android:textSize="18sp" />
+
+                   <TextView
+                       android:id="@+id/tvActive"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:fontFamily="sans-serif-light"
+                       android:text="0"
+
+                       android:textAlignment="textEnd"
+                       android:textColor="@color/colorOne"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </RelativeLayout>
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginRight="20dp"
+                   android:background="@color/colorTwo" />
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="25dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginRight="25dp"
+                   android:layout_marginBottom="10dp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-light"
+                       android:text="Tests"
+                       android:textSize="18sp" />
+
+                   <TextView
+                       android:id="@+id/tvTests"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:fontFamily="sans-serif-light"
+                       android:text="0"
+
+                       android:textAlignment="textEnd"
+                       android:textColor="@color/colorOne"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </RelativeLayout>
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginRight="20dp"
+                   android:background="@color/colorTwo" />
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="25dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginRight="25dp"
+                   android:layout_marginBottom="10dp">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="sans-serif-light"
+                       android:text="Tests per 1 Million"
+                       android:textSize="18sp" />
+
+                   <TextView
+                       android:id="@+id/tvTpm"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:fontFamily="sans-serif-light"
+                       android:text="0"
+
+                       android:textAlignment="textEnd"
+                       android:textColor="@color/colorOne"
+                       android:textSize="18sp"
+                       android:textStyle="bold" />
+               </RelativeLayout>
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:layout_marginLeft="20dp"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginRight="20dp"
+                   android:background="@color/colorTwo" />
+
+           </LinearLayout>
+
+       </androidx.cardview.widget.CardView>
+
+
+       </RelativeLayout>
+
+
+
+
+   </RelativeLayout>
+
+
+</ScrollView>

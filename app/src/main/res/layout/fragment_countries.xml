@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.CountriesFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/main_header"
+        android:gravity="bottom"
+
+        android:background="@color/colorPrimary"
+        android:layout_height="65dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Countries Affected"
+            android:textStyle="bold"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="35dp"
+            android:textSize="21sp"
+            android:textColor="@color/colorWhite"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="@drawable/redbac"
+        android:layout_width="match_parent"
+        android:id="@+id/header"
+        android:layout_below="@id/main_header"
+        android:orientation="vertical"
+        android:layout_height="170dp">
+        <SearchView
+            android:layout_width="match_parent"
+            android:id="@+id/searchView"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:focusedByDefault="true"
+            android:paddingLeft="10dp"
+            android:queryHint="Search"
+            android:background="@drawable/general_outline"
+            android:layout_height="38dp"/>
+    </LinearLayout>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/listView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:divider="@null"
+        android:scrollbars="none"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:layout_below="@id/header"
+        android:layout_height="match_parent"/>
+    <com.leo.simplearcloader.SimpleArcLoader
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:arc_style="simple_arc"
+        android:layout_centerInParent="true"
+        app:arc_speed="fast"
+        android:visibility="visible"
+        android:id="@+id/loader"/>
+</RelativeLayout>

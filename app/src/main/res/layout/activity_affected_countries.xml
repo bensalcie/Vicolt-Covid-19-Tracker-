@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTwo"
+    tools:context=".AffectedCountries">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/productList"
+        android:layout_marginBottom="70dp"
+        android:layout_height="match_parent"/>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_above="@id/chatHolder"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/chatHolder"
+        android:backgroundTint="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/chat_holder"
+        android:layout_height="wrap_content">
+
+
+
+        <ImageButton
+            android:layout_width="35dp"
+            android:id="@+id/btngif"
+            android:background="@null"
+            android:layout_margin="7dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/chatic"
+            android:layout_alignParentStart="true"
+            android:layout_height="35dp"/>
+
+        <EditText
+            android:layout_width="220dp"
+            android:hint="Message..."
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btngif"
+            android:id="@+id/etMessage"
+            android:layout_height="wrap_content"/>
+        <ImageButton
+            android:layout_width="35dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+
+            android:id="@+id/btnGallery"
+            android:layout_margin="7dp"
+            android:layout_toLeftOf="@+id/btnSend"
+            android:src="@drawable/galleryic"
+            android:layout_height="35dp"/>
+        <ImageButton
+            android:layout_width="35dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="14dp"
+
+
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="10dp"
+
+            android:id="@+id/btnSend"
+            android:layout_centerVertical="true"
+            android:src="@drawable/sendico"
+            android:layout_alignParentRight="true"
+            android:layout_height="35dp"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

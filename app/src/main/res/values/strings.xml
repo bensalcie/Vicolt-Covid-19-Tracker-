@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Vicolt</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="facebook_app_id">267999397665027</string>
+    <string name="fb_login_protocol_scheme">fb267999397665027</string>
+    <string name="app_id_ads">ca-app-pub-2540463123963261~4186538002</string>
+    <string name="countries_banner_id">ca-app-pub-2540463123963261/7895710549</string>
+    <string name="your_country_add">ca-app-pub-2540463123963261/6421819107</string>
+    <string name="data_source">Data source: https://disease.sh  \n\nPrivacy policy:  \nhttp://bensalcie.likesyou.org/cwc/privacy_policy.html</string>
+    <string name="about">Developed by\n Ben Salcie, feel free to suggest anything. (bensalcie@ieee.org)</string>
+
+</resources>
